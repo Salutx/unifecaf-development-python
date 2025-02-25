@@ -96,8 +96,6 @@ def build_chart():
     csv_data = get_data_from_csv(csv_today)
 
     if csv_data is not None and not csv_data.empty:
-        # Build chart with x-axis with date and y-axis with umidity and temperature
-
         fig, ax1 = plt.subplots()
 
         ax2 = ax1.twinx()
