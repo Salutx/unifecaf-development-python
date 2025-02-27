@@ -145,9 +145,9 @@ def build_screen():
     )
     lbl_umid = tk.Label(root, text=f"💧 Umidade: {umidade}%", font=("Arial", 12))
     lbl_hora = tk.Label(root, text=f"🕒 Horário: {horario}", font=("Arial", 12))
-    lbl_rows = tk.Label(
-        root, text=f"Total de registros: {len(csv_data)}", font=("Arial", 12)
-    )
+    
+    total_registros = len(csv_data) if csv_data is not None and not csv_data.empty else 0
+    lbl_rows = tk.Label(root, text=f"Total de registros: {total_registros}", font=("Arial", 12))
 
     lbl_titulo.pack(pady=10)
     lbl_temp.pack(pady=5)
